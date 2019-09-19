@@ -82,11 +82,6 @@ a:hover {
   margin: 30px;
 }
 
-#profile-pic {
-  border-radius: 50%;
-  box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
-}
-
 .list-inline {
   list-style: none;
   padding-left: 0px;
