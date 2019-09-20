@@ -7,50 +7,64 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script language="JavaScript" type="text/javascript" src="./index.js"></SCRIPT>
+      <link rel="shortcut icon" type="image/jpg" href="/images/saut3.jpg"/>
     <title>My profile</title>
   </head>
   <body>
-    <div class="banner" >
-      <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url( 'images/saut3.jpg')"></div>
-      <div class="">
-        <h1>Thibaud Maurel</h1>
-        <h2>Développeur Full Stack</h2>
-      </div>
-    </div>
-    <div class="tabs">
-      <div class="tab active"><h1>Portfolio</h1></div>
-      <div class="tab"><h1>A propos</h1></div>
-      <div class="tab"><h1>Contact</h1></div>
-    </div>
-    <div>
-      <p>2012 - 2015</p>
-      <p>Telecom Bretagne</p>
-      <p>2019 : Le Wagon</p>
-    </div>
-
     <div class="container">
-      <div class="card">
-        <h2>Follow me</h2>
-        <ul class="list-inline">
-          <li>
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
+      <div class="banner" >
+        <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url( 'images/saut3.jpg')"></div>
+        <div class="">
+          <h1>Thibaud Maurel</h1>
+          <h2>Développeur Full Stack</h2>
+        </div>
+      </div>
+      <div class="tabs">
+        <div class="tab active" data-tag="portfolio"><h1>Portfolio</h1></div>
+        <div class="tab" data-tag="about"><h1>A propos</h1></div>
+        <div class="tab" data-tag="contact"><h1>Contact</h1></div>
+      </div>
+
+      <div class="contents">
+        <div id="portfolio" class="content">
+          <p>Test portfolio</p>
+        </div>
+        <div id="about" class="content hidden">
+          <p>Test about</p>
+        </div>
+        <div id="contact" class="content hidden">
+          <p>Test contact</p>
+        </div>
+      </div>
+      <div>
+        <p>2012 - 2015</p>
+        <p>Telecom Bretagne</p>
+        <p>2019 : Le Wagon</p>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <h2>Follow me</h2>
+          <ul class="list-inline">
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-
     <script>
       const tabs = document.querySelectorAll('.tab');
       tabs.forEach((tab) => {
@@ -59,6 +73,10 @@
             tab.classList.remove('active')
           });
           tab.classList.add('active')
+          document.querySelectorAll('.content').forEach((content) => {
+            content.classList.add('hidden')
+          });
+          document.getElementById(tab.dataset.tag).classList.remove('hidden');
         });
       });
     </script>
