@@ -6,19 +6,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script language="JavaScript" type="text/javascript" src="./index.js"></SCRIPT>
     <title>My profile</title>
   </head>
   <body>
     <div class="banner" >
-      <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url( 'images/saut3.jpg')"></div>
+      <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url( 'images/saut3.jpg')"></div>
       <div class="">
         <h1>Thibaud Maurel</h1>
-        <h2>Full Stack Developer</h2>
+        <h2>Développeur Full Stack</h2>
       </div>
     </div>
     <div class="tabs">
-      <h1>Portfolio</h1>
-      <h1>Education</h1>
+      <div class="tab active"><h1>Portfolio</h1></div>
+      <div class="tab"><h1>A propos</h1></div>
+      <div class="tab"><h1>Contact</h1></div>
     </div>
     <div>
       <p>2012 - 2015</p>
@@ -48,5 +50,17 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', (event) => {
+          tabs.forEach((tab) => {
+            tab.classList.remove('active')
+          });
+          tab.classList.add('active')
+        });
+      });
+    </script>
   </body>
 </html>

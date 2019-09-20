@@ -39,6 +39,27 @@
   text-shadow: 2px 2px 10px black;
 }
 
+/* Tabs */
+.tabs {
+  display:flex;
+  justify-content: space-around;
+}
+
+/* Tab */
+.tab h1 {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+/* Tab active */
+.active h1 {
+  font-weight: 700;
+  border-bottom: 1px solid black;
+  text-shadow: 2px 2px 10px black;
+}
+
+
 
 body {
   background-color: #white;
