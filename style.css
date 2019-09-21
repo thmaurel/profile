@@ -6,20 +6,39 @@
   padding: 10px;
 }
 
+body {
+  background-color: rgba(0,0,0,0.2);
+  color: black;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 0;
+}
+
 h1 {
-  color: blue;
-  font-size: 4vw;
+  color: #482728;
+  font-size: 3vw;
   font-family: 'Cinzel', serif;
   font-weight: 400;
   margin: 0;
 }
 
 h2 {
-  color: blue;
-  font-size: 2vw;
+  color: #482728;
+  font-size: 1.5vw;
   font-family: 'Cinzel', serif;
   margin : 0;
   font-weight: 400;
+}
+
+a {
+  color: #482728;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #B71010;
 }
 
 /* Flexbox principale de la banner*/
@@ -33,13 +52,13 @@ h2 {
 
 /* Avatar dans la banner */
 .banner-image {
-  width: 15vw;
-  height: 15vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
   margin-right: 30px;
-  box-shadow: 1px 1px 5px black;
+  /*box-shadow: 1px 1px 5px black;*/
 }
 
 /* Titre banner */
@@ -64,8 +83,8 @@ h2 {
   cursor: pointer;
 }
 
-.tab:hover {
-  text-shadow: 2px 2px 10px black;
+.tab:hover h2 {
+  font-weight: 700;
 }
 
 
@@ -88,6 +107,10 @@ h2 {
   border-bottom: 1px solid grey;
 }
 
+.portfolio-card-last {
+  border-bottom: none;
+}
+
 .image-grid {
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -100,26 +123,8 @@ h2 {
   background-size: cover;
 }
 
-body {
-  background-color: grey;
-  color: #1F2232;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 15px;
-  margin: 0;
-}
 
 
-
-a {
-  text-decoration: none;
-  color: #B9C0DA;
-  font-weight: 700;
-}
-
-a:hover {
-  color: #B71010;
-}
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
