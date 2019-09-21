@@ -31,6 +31,14 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  color: black;
+  font-size: 1vw;
+  font-family: 'Cinzel', serif;
+  margin : 0;
+  font-weight: 400;
+}
+
 a {
   color: #482728;
   text-decoration: none;
@@ -74,7 +82,7 @@ a:hover {
 /* Tabs */
 .tabs {
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px 0;
 }
 
@@ -107,10 +115,6 @@ a:hover {
   border-bottom: 1px solid grey;
 }
 
-.portfolio-card-last {
-  border-bottom: none;
-}
-
 .image-grid {
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -123,7 +127,30 @@ a:hover {
   background-size: cover;
 }
 
+/* Content contact*/
+.footer {
+  margin-top: 10px;
+}
 
+.contact-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact-card {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-img {
+  font-size: 3vw;
+  margin-right: 10px;
+}
+
+.contact-description p {
+  margin: 0;
+}
 
 
 @media (max-width: 960px) {
@@ -170,5 +197,10 @@ a:hover {
 
   .portfolio-image {
     height: 60vw;
+  }
+
+  .contact-grid {
+    display:grid;
+    grid-template-columns: 1fr;
   }
 }
