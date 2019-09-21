@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="container">
-
       <div class="banner" >
         <div class="banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url( 'images/saut2.jpg')"></div>
         <div class="">
@@ -20,14 +19,12 @@
           <h2>Développeur Full Stack</h2>
         </div>
       </div>
-
       <div class="tabs">
         <div class="tab active" data-tag="portfolio"><h2>Portfolio</h2></div>
         <div class="tab" data-tag="about"><h2>A propos</h2></div>
       </div>
-
       <div class="contents">
-        <div id="portfolio" class="content">
+        <div id="portfolio" class="content hidden">
           <div class="portfolio-card">
             <h2><a href="http://www.skrumble.world">Skrumble</a></h2>
             <p>Skrumble est le projet de fin de formation que j'ai effectué en groupe au Wagon</p>
@@ -39,7 +36,7 @@
             </div>
           </div>
           <div class="portfolio-card">
-            <h2><a href="https://www.jabbarentals.herokuapp.com">Jabba Rentals</a></h2>
+            <h2><a href="https://jabbarentals.herokuapp.com">Jabba Rentals</a></h2>
             <p>Jabba Rentals est un projet d'une semaine effectué lors de la formation au Wagon</p>
             <div class="image-grid">
               <div class="portfolio-image" style="background-image: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.18)), url( 'images/jabba.png')"></div>
@@ -49,11 +46,24 @@
             </div>
           </div>
         </div>
-        <div id="about" class="content hidden">
-          <p>Test about</p>
+        <div id="about" class="content">
+          <p>Originaire de banlieue parisienne 92i</p>
+          <div class="center">
+            <h2>Compétences</h2>
+            <img src="images/html.png" alt="" class="skill-icon">
+            <img src="images/css.png" alt="" class="skill-icon">
+            <img src="images/js.png" alt="" class="skill-icon">
+            <img src="images/ruby.png" alt="" class="skill-icon">
+            <img src="images/rails.png" alt="" class="skill-icon">
+            <img src="images/vba.jpg" alt="" class="skill-icon">
+            <h2>Formations</h2>
+            <img src="images/estb.png" alt="" class="edu-icon">
+            <img src="images/wagon.png" alt="" class="edu-icon">
+            <h2>Centres d'intérêts</h2>
+            <img src="images/iko.png" alt="" class="edu-icon">
+          </div>
         </div>
       </div>
-
       <div class="footer">
           <div class="contact-grid">
             <a href="https://github.com/thmaurel">
@@ -90,30 +100,7 @@
               </div>
             </a>
           </div>
-        </div>
-
-      <!-- <div class="container">
-        <div class="card">
-          <h2>Follow me</h2>
-          <ul class="list-inline">
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
+      </div>
     </div>
     <script>
       const tabs = document.querySelectorAll('.tab');

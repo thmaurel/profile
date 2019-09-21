@@ -6,6 +6,10 @@
   padding: 10px;
 }
 
+.center {
+  text-align: center;
+}
+
 body {
   background-color: rgba(0,0,0,0.2);
   color: black;
@@ -125,6 +129,17 @@ a:hover {
   height: 17vw;
   background-position: center;
   background-size: cover;
+}
+
+/* Content About */
+.skill-icon {
+  height: 80px;
+  margin: 10px;
+}
+
+.edu-icon {
+  height: 100px;
+  margin: 10px;
 }
 
 /* Content contact*/
