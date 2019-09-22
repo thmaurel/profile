@@ -130,9 +130,13 @@ a:hover {
 }
 
 .portfolio-image {
-  height: 17vw;
+  height: auto;
   background-position: center;
   background-size: cover;
+}
+
+.portfolio-image img {
+  width:100%;
 }
 
 /* Content About */
@@ -210,6 +214,10 @@ a:hover {
     font-size: 4vw;
   }
 
+  h3 {
+    font-size: 3vw;
+  }
+
   .banner-image {
     width: 22vw;
     height: 22vw;
@@ -219,13 +227,12 @@ a:hover {
     grid-template-columns: 1fr;
 
   }
-
   .portfolio-image {
-    height: 70vw;
+    height: auto;
+  }
+  .portfolio-image img {
+    width:100%;
   }
 
-  .contact-grid {
-    display:grid;
-    grid-template-columns: 1fr;
-  }
+
 }
