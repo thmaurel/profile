@@ -221,6 +221,11 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .skill-icon {
+    height: 60px;
+    margin: 10px;
+  }
 }
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
@@ -258,5 +263,8 @@ a:hover {
     width:100%;
   }
 
-
+  .skill-icon {
+    height: 40px;
+    margin: 10px;
+  }
 }
