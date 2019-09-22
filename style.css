@@ -7,7 +7,7 @@
 }
 
 .center {
-
+  border-bottom: 1px solid grey;
 }
 
 .center h2 {
@@ -145,8 +145,16 @@ a:hover {
   margin: 10px;
 }
 
+.edu-grid {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
 .edu-icon {
-  height: 100px;
+  width: 70%;
   margin: 10px;
 }
 
