@@ -163,6 +163,7 @@ a {
 
   .content {
     flex-direction: column;
+    height: auto;
   }
 
   .footer-desc, .description {
