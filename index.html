@@ -32,6 +32,11 @@
         <div class="tab-content">
           <div class="portfolio">
             <h1>PORTFOLIO :</h1>
+            <div class="siema2">
+              <p>Ahahah</p>
+              <p>Eheheh</p>
+              <p>Ihihih</p>
+            </div>
             <div class="siema portfolio-carousel">
               <img src="images/jabba.png" alt="">
               <img src="images/jabba1.png" alt="">
@@ -102,6 +107,16 @@
 
       // listen for keydown event
       setInterval(() => mySiema.next(), 3000)
+
+      const mySiema2 = new Siema({
+        selector: '.siema2',
+        duration: 1450,
+        loop: true,
+        easing: 'ease-out',
+      });
+
+      // listen for keydown event
+      setInterval(() => mySiema2.next(), 12000)
     </script>
   </body>
 </html>
