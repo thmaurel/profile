@@ -140,6 +140,13 @@ a:hover {
 }
 
 /* Content About */
+
+#skills {
+  display:flex;
+  align-items:center;
+  height: 100%;
+}
+
 .skill-grid {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

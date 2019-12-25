@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Cormorant+Garamond:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="animate.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -15,37 +16,71 @@
     <title>Work in progress..</title>
   </head>
   <body>
-    <div class="container">
+    <div class="main-container">
       <div class="navbar">
-        <span class="tab active">PORTFOLIO</span>
-        <span class="tab">COMPETENCES</span>
-        <span class="tab">FORMATIONS</span>
-        <span class="tab">A PROPOS</span>
-        <span class="tab">CONTACT</span>
+        <span class="tab active animated zoomIn" data-target="portfolio" >PORTFOLIO</span>
+        <span class="tab animated zoomIn" data-target="skills" >COMPETENCES</span>
+        <span class="tab animated zoomIn" data-target="edu" >FORMATIONS</span>
+        <span class="tab animated zoomIn" data-target="about" >A PROPOS</span>
+        <span class="tab animated zoomIn" data-target="contact" >CONTACT</span>
       </div>
-      <div class="content">
-        <div class="description">
-          <h1>Thibaud Maurel</h1>
-          <p>Développeur Fullstack</p>
-          <p>Prof @Le Wagon</p>
-        </div>
-        <div class="tab-content">
-          <div class="portfolio">
-            <h1>PORTFOLIO :</h1>
-            <div class="siema2">
-              <p>Ahahah</p>
-              <p>Eheheh</p>
-              <p>Ihihih</p>
+      <div class="container">
+        <div class="content">
+          <div class="description">
+            <h1>Thibaud Maurel</h1>
+            <p>Développeur Fullstack</p>
+            <p>Prof @Le Wagon</p>
+          </div>
+          <div class="tab-content">
+            <div class="swap-content" id="portfolio">
+              <div class="siema2">
+                <div class="jabba">
+                  <p>Jabba Rentals est un projet d'une semaine effectué lors de la formation au Wagon</p>
+                  <div class="siema portfolio-carousel">
+                    <img src="images/jabba.png" alt="">
+                    <img src="images/jabba1.png" alt="">
+                    <img src="images/jabba2.png" alt="">
+                    <img src="images/jabba3.png" alt="">
+                  </div>
+                </div>
+                <div class="skrumble">
+                  <p>Skrumble est le projet de fin de formation que j'ai effectué en groupe au Wagon</p>
+                  <div class="siema1 portfolio-carousel">
+                    <img src="images/skrumble.png" alt="">
+                    <img src="images/skrumble1.png" alt="">
+                    <img src="images/skrumble2.png" alt="">
+                    <img src="images/skrumble3.png" alt="">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="siema portfolio-carousel">
-              <img src="images/jabba.png" alt="">
-              <img src="images/jabba1.png" alt="">
-              <img src="images/jabba2.png" alt="">
-              <img src="images/jabba3.png" alt="">
-              <img src="images/skrumble.png" alt="">
-              <img src="images/skrumble1.png" alt="">
-              <img src="images/skrumble2.png" alt="">
-              <img src="images/skrumble3.png" alt="">
+            <div class="swap-content d-none" id="skills">
+              <div class="skill-grid">
+                <img src="images/html.png" alt="" class="skill-icon animated fadeIn">
+                <img src="images/css.png" alt="" class="skill-icon animated fadeIn">
+                <img src="images/js.png" alt="" class="skill-icon animated fadeIn">
+                <img src="images/ruby.png" alt="" class="skill-icon animated fadeIn">
+                <img src="images/rails.png" alt="" class="skill-icon animated fadeIn">
+                <img src="images/vba.jpg" alt="" class="skill-icon animated fadeIn">
+              </div>
+            </div>
+            <div class="swap-content d-none" id="edu">
+              <div class="edu-grid">
+                <img src="images/estb.png" alt="" class="edu-icon">
+                <img src="images/wagon.png" alt="" class="edu-icon">
+              </div>
+            </div>
+            <div class="swap-content d-none" id="about">
+              <p>   Originaire de banlieue parisienne, j'ai passé 3 ans en Bretagne dans le cadre de ma formation d'ingénieur à Telecom Bretagne. Après 2 ans de mission chez BNP Paribas à travailler sur des projets informatiques, je suis parti en Nouvelle-Zélande dans le cadre d'un visa vacances-travail. Cette aventure très enrichissante m'a permis de découvrir une nouvelle culture et de vivre des expériences très variées.</p>
+              <p>   Après une année de voyages et nombreuses découvertes, je suis rentré en France désireux de prendre une nouvelle direction. J'ai donc suivi la formation de développeur full stack chez Le Wagon qui m'a convaincu. J'ai par la suite rejoint l'équipe de professeurs afin de pouvoir transmettre ce qui m'avait été appris.</p>
+            </div>
+            <div class="swap-content d-none" id="contact">
+              <div class="fun-grid">
+                <img src="images/foot.png" alt="" class="fun-icon">
+                <img src="images/iko2.png" alt="" class="fun-icon">
+                <img src="images/triathlon.png" alt="" class="fun-icon">
+                <img src="images/travel.png" alt="" class="fun-icon">
+              </div>
             </div>
           </div>
         </div>
@@ -107,6 +142,16 @@
 
       // listen for keydown event
       setInterval(() => mySiema.next(), 3000)
+
+      const mySiema1 = new Siema({
+        selector: '.siema1',
+        duration: 1450,
+        loop: true,
+        easing: 'ease-out',
+      });
+
+      // listen for keydown event
+      setInterval(() => mySiema1.next(), 3000)
 
       const mySiema2 = new Siema({
         selector: '.siema2',

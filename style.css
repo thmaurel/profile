@@ -10,8 +10,12 @@ a {
 }
 
 /* Container */
-.container {
+.main-container {
   position: relative;
+}
+
+.container {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.1) 20%);
 }
 
 /* Navbar */
@@ -40,10 +44,11 @@ a {
 
 /* Content */
 .content {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.1) 20%);
   height: 60vh;
   display: flex;
   justify-content:space-between;
+  width: 1200px;
+  margin: auto;
 }
 
 .description {
@@ -52,11 +57,22 @@ a {
   display:flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 10vw;
 }
 
 .tab-content{
   width: 45vw;
+  margin-top: calc(20vh - 80px);
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.d-none {
+  display: none;
+}
+
+.swap-content p, .swap-content h1 {
+  margin: 0;
 }
 
 .portfolio {
@@ -64,6 +80,10 @@ a {
   display:flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.jabba, .skrumble {
+  width: 35vw;
 }
 
 .portfolio-carousel {
@@ -74,6 +94,49 @@ a {
   width: 30vw;
   height: auto;
   object-fit: cover;
+}
+
+
+
+.skill-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+.skill-icon {
+  height: 80px;
+  margin: 10px;
+}
+
+.edu-grid {
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.edu-icon {
+  width: 70%;
+  margin: 10px;
+}
+
+.fun-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+  justify-items: center;
+  align-items: center;
+}
+
+.fun-icon {
+  width: 60%;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 /* Footer */
@@ -91,7 +154,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 10vw;
+  padding-left: 6vw;
 }
 
 .light {
@@ -141,8 +204,8 @@ a {
 #photo {
   height: calc(60vh + 20px);
   position: absolute;
-  top: 170px;
-  left: 32vw;
+  top: 20vh;
+  left: 28vw;
   border-radius: 5px;
   width: 20vw;
   object-fit: cover;
@@ -151,9 +214,17 @@ a {
 
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
+  .content {
+    width: 700px;
+    margin: auto;
+  }
 }
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
+  .content {
+    width: 500px;
+    margin: auto;
+  }
 }
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
